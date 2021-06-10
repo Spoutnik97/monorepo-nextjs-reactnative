@@ -1,11 +1,11 @@
 import React, { FunctionComponent, useCallback } from 'react';
-import { Button, StyleSheet, View, Text } from 'react-native';
+import { Button, StyleSheet, View, Text, Alert } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { t, Trans } from '@lingui/macro';
 
 import { RootStackParamList } from '../../navigation';
 import { useLingui } from '@lingui/react';
-
+import { SharedButton } from 'shared/components/SharedButton';
 type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
 
 type Props = {
@@ -36,6 +36,7 @@ export const Home: FunctionComponent<Props> = ({ navigation }) => {
         title={i18n._(t({ id: 'Go to Login Page', comment: 'Title of the go to login button' }))}
         onPress={goToLoginPage}
       />
+      <SharedButton onPress={() => Alert.alert('Coucou')} title="Press my shared button" />
       <Button
         title={i18n._(
           t({
