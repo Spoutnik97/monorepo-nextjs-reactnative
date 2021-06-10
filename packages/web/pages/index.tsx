@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { View, Text, Button } from "react-native";
+import { SharedButton } from "shared/components/SharedButton";
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -27,6 +29,8 @@ export default function Home() {
           <Button onPress={() => alert("coucou")} title="Press me" />
         </View>
 
+        <hr />
+        <SharedButton onPress={() => alert("hello")} title="Shared Press me" />
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
