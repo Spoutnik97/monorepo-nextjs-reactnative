@@ -1,0 +1,11 @@
+{
+  "name": "monorepo-template",
+  "version": "1.0.0",
+  "description": "Template of a monorepo with NextJS, React Native and React Native Web",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
