@@ -1,0 +1,7 @@
+# Windows files should use crlf line endings
+# https://help.github.com/articles/dealing-with-line-endings/
+*.bat text eol=crlf
+
+*.pbxproj -text
+*.keystore.properties filter=crypt diff=crypt
+*.secret filter=crypt diff=crypt
