@@ -769,11 +769,6 @@
     "@babel/helper-validator-identifier" "^7.14.5"
     to-fast-properties "^2.0.0"
 
-"@bam.tech/react-native-config@^1.4.2":
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/@bam.tech/react-native-config/-/react-native-config-1.4.2.tgz#05cfa706751b32bb2a3807ddfd39bb358f20ca6d"
-  integrity sha512-2Wbw7nJQLnm3EBid8VGkn+4pZxHLi1z1uPiGsGexcP76Rnztz/iDQNqjgi3QZViISNOYSQU70KF7pOlxxyMFng==
-
 "@bcoe/v8-coverage@^0.2.3":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
@@ -9080,6 +9075,11 @@ react-native-codegen@^0.0.6:
     flow-parser "^0.121.0"
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
+
+react-native-config@1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-1.4.2.tgz#cc39f22ed72c5cb06af1adf0ba70ef01593900b4"
+  integrity sha512-iTvCvThvFTH7SdiBcsxYtpLy86zglsh51ZBqFPPZ75tdrQMdlRnDNnb86kNjQf03KT0qs1nCMLRejfPMIim8iA==
 
 react-native-gesture-handler@^1.6.0:
   version "1.10.3"

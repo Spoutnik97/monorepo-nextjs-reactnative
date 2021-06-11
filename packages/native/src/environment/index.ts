@@ -1,4 +1,4 @@
-import Config from '@bam.tech/react-native-config';
+import Config from 'react-native-config';
 import { parseBooleanVariables } from './utils/parseBooleanVariables';
 
 export interface GenericEnvironment {

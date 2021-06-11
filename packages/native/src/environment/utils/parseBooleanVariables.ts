@@ -1,8 +1,8 @@
-import { NativeConfig } from '@bam.tech/react-native-config';
+import { NativeConfig } from 'react-native-config';
 import { GenericEnvironment } from '..';
 
 export const parseBooleanVariables = (config: NativeConfig): GenericEnvironment => {
-  const configWithActualBooleans = { ...config } as GenericEnvironment;
+  const configWithActualBooleans: { [name: string]: string | boolean } = { ...config };
 
   Object.keys(config).map(key => {
     if (config[key] === 'true') {
@@ -12,5 +12,5 @@ export const parseBooleanVariables = (config: NativeConfig): GenericEnvironment 
     }
   });
 
-  return configWithActualBooleans;
+  return configWithActualBooleans as unknown as GenericEnvironment;
 };

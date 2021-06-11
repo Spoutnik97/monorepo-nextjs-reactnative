@@ -12,7 +12,8 @@ project.ext.envConfigFiles = [
         productionrelease: ".env.production",
         "": ".env.staging",                         // Default (must be the last in the list so as not to override others)
 ]
-apply from: project(':bam.tech_react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 
 import com.android.build.OutputFile
 
@@ -92,10 +93,12 @@ import com.android.build.OutputFile
 
 project.ext.react = [
     enableHermes: true,  // clean and rebuild if changing
+    entryFile: "packages/native/index.js",
+    root: "../../../../",
 ]
 
-apply from: "../../node_modules/react-native/react.gradle"
-apply from: "../../node_modules/react-native-code-push/android/codepush.gradle" // @codepush
+apply from: "../../../../node_modules/react-native/react.gradle"
+apply from: "../../../../node_modules/react-native-code-push/android/codepush.gradle" // @codepush
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -234,7 +237,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0-rc01' // @react-navigation
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02' // @react-navigation
     if (enableHermes) {
-      def hermesPath = "../../node_modules/hermes-engine/android/";
+      def hermesPath = "../../../../node_modules/hermes-engine/android/";
       debugImplementation files(hermesPath + "hermes-debug.aar")
       releaseImplementation files(hermesPath + "hermes-release.aar")
     } else {
@@ -249,4 +252,4 @@ task copyDownloadableDepsToLibs(type: Copy) {
     into 'libs'
 }
 
-apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+apply from: file("../../../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)

@@ -73,6 +73,8 @@ ios/envfile
 
 # Firebase
 GoogleService-Info.plist
+GoogleService-Info.staging.plist
+GoogleService-Info.production.plist
 
 # Lingui
 src/locales/_build
